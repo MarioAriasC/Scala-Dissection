@@ -1,0 +1,8 @@
+package org.cakesolutions.scala.basic;
+
+import scala.reflect.*;
+
+@ScalaSignature(bytes = "\u0006\u0001a9Q!\u0001\u0002\t\u0002-\t1\"R7qif|%M[3di*\u00111\u0001B\u0001\u0006E\u0006\u001c\u0018n\u0019\u0006\u0003\u000b\u0019\tQa]2bY\u0006T!a\u0002\u0005\u0002\u001b\r\f7.Z:pYV$\u0018n\u001c8t\u0015\u0005I\u0011aA8sO\u000e\u0001\u0001C\u0001\u0007\u000e\u001b\u0005\u0011a!\u0002\b\u0003\u0011\u0003y!aC#naRLxJ\u00196fGR\u001c\"!\u0004\t\u0011\u0005E\u0019R\"\u0001\n\u000b\u0003\u0015I!\u0001\u0006\n\u0003\r\u0005s\u0017PU3g\u0011\u00151R\u0002\"\u0001\u0018\u0003\u0019a\u0014N\\5u}Q\t1\u0002")
+public final class EmptyObject
+{
+}
