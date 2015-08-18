@@ -21,10 +21,10 @@ object BasicFunctions {
 
 
   def main(args: Array[String]) {
-    println(concat("Hello, ", "World!"))
-    println(sumInts(1, 2))
-    println(sumDoubles(1, 2))
-    println(sumIntsToString(1, 2))
+    assert(concat("Hello, ", "World!") == "Hello, World!")
+    assert(sumInts(1, 2) == 3)
+    assert(sumDoubles(1, 2) == 3.0)
+    assert(sumIntsToString(1, 2) == "3")
 
   }
 }
