@@ -15,6 +15,10 @@ object BasicFunctions {
     x + y
   }
 
+  private val sumLongs = (x: Long, y: Long, z: Long) => {
+    x + y + z
+  }
+
   private val sumIntsToString = (x: Int, y: Int) => {
     s"${sumInts(x, y)}"
   }
@@ -24,6 +28,7 @@ object BasicFunctions {
     assert(concat("Hello, ", "World!") == "Hello, World!")
     assert(sumInts(1, 2) == 3)
     assert(sumDoubles(1, 2) == 3.0)
+    assert(sumLongs(1, 2, 3) == 6)
     assert(sumIntsToString(1, 2) == "3")
 
   }
