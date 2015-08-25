@@ -25,11 +25,12 @@ object BasicFunctions {
 
 
   def main(args: Array[String]) {
-    assert(concat("Hello, ", "World!") == "Hello, World!")
+    val helloWorld = concat("Hello, ", "World!")
+    assert(helloWorld == "Hello, World!")
+    assert(sumIntsToString(1, 2) == "3")
     assert(sumInts(1, 2) == 3)
     assert(sumDoubles(1, 2) == 3.0)
     assert(sumLongs(1, 2, 3) == 6)
-    assert(sumIntsToString(1, 2) == "3")
 
   }
 }

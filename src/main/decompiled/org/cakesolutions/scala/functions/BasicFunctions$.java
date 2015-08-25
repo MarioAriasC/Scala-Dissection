@@ -37,49 +37,50 @@ public final class BasicFunctions$
     }
     
     public void main(final String[] args) {
+        final String helloWorld = (String)this.concat().apply((Object)"Hello, ", (Object)"World!");
         final Predef$ module$ = Predef$.MODULE$;
-        final Object apply = this.concat().apply((Object)"Hello, ", (Object)"World!");
-        final String s = "Hello, World!";
+        final String s = helloWorld;
+        final String s2 = "Hello, World!";
         boolean b = false;
-        Label_0043: {
-            Label_0042: {
-                if (apply == null) {
-                    if (s != null) {
-                        break Label_0042;
+        Label_0048: {
+            Label_0047: {
+                if (s == null) {
+                    if (s2 != null) {
+                        break Label_0047;
                     }
                 }
-                else if (!apply.equals(s)) {
-                    break Label_0042;
+                else if (!s.equals(s2)) {
+                    break Label_0047;
                 }
                 b = true;
-                break Label_0043;
+                break Label_0048;
             }
             b = false;
         }
         module$.assert(b);
-        Predef$.MODULE$.assert(this.org$cakesolutions$scala$functions$BasicFunctions$$sumInts().apply$mcIII$sp(1, 2) == 3);
-        Predef$.MODULE$.assert(this.sumDoubles().apply$mcDDD$sp(1.0, 2.0) == 3.0);
-        Predef$.MODULE$.assert(BoxesRunTime.unboxToLong(this.sumLongs().apply((Object)BoxesRunTime.boxToLong(1L), (Object)BoxesRunTime.boxToLong(2L), (Object)BoxesRunTime.boxToLong(3L))) == 6L);
         final Predef$ module$2 = Predef$.MODULE$;
-        final Object apply2 = this.sumIntsToString().apply((Object)BoxesRunTime.boxToInteger(1), (Object)BoxesRunTime.boxToInteger(2));
-        final String s2 = "3";
+        final Object apply = this.sumIntsToString().apply((Object)BoxesRunTime.boxToInteger(1), (Object)BoxesRunTime.boxToInteger(2));
+        final String s3 = "3";
         boolean b2 = false;
-        Label_0196: {
-            Label_0195: {
-                if (apply2 == null) {
-                    if (s2 != null) {
-                        break Label_0195;
+        Label_0101: {
+            Label_0100: {
+                if (apply == null) {
+                    if (s3 != null) {
+                        break Label_0100;
                     }
                 }
-                else if (!apply2.equals(s2)) {
-                    break Label_0195;
+                else if (!apply.equals(s3)) {
+                    break Label_0100;
                 }
                 b2 = true;
-                break Label_0196;
+                break Label_0101;
             }
             b2 = false;
         }
         module$2.assert(b2);
+        Predef$.MODULE$.assert(this.org$cakesolutions$scala$functions$BasicFunctions$$sumInts().apply$mcIII$sp(1, 2) == 3);
+        Predef$.MODULE$.assert(this.sumDoubles().apply$mcDDD$sp(1.0, 2.0) == 3.0);
+        Predef$.MODULE$.assert(BoxesRunTime.unboxToLong(this.sumLongs().apply((Object)BoxesRunTime.boxToLong(1L), (Object)BoxesRunTime.boxToLong(2L), (Object)BoxesRunTime.boxToLong(3L))) == 6L);
     }
     
     private BasicFunctions$() {
