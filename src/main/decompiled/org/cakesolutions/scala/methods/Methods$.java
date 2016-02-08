@@ -55,8 +55,12 @@ public final class Methods$
         return a + b;
     }
     
-    public int curriedSum(final int a, final int b) {
+    public int curriedSum2(final int a, final int b) {
         return a + b;
+    }
+    
+    public int curriedSum3(final int a, final int b, final int c) {
+        return a + b + c;
     }
     
     public int sumWithImplicits(final int a, final int b) {
@@ -105,7 +109,12 @@ public final class Methods$
         module$.assert(this.sum(x$7, x$6) == 12);
         final Function1 sum5 = (Function1)new Methods$$anonfun.Methods$$anonfun$1();
         Predef$.MODULE$.assert(sum5.apply$mcII$sp(7) == 12);
-        Predef$.MODULE$.assert(this.curriedSum(5, 7) == 12);
+        final Function1 sum6 = (Function1)new Methods$$anonfun.Methods$$anonfun$5();
+        final Function1 sum7 = (Function1)sum6.apply((Object)BoxesRunTime.boxToInteger(6));
+        Predef$.MODULE$.assert(sum7.apply$mcII$sp(2) == 12);
+        final Function1 sum4and6 = (Function1)new Methods$$anonfun.Methods$$anonfun$2();
+        Predef$.MODULE$.assert(sum4and6.apply$mcII$sp(2) == 12);
+        Predef$.MODULE$.assert(this.curriedSum2(5, 7) == 12);
         final int b = 7;
         Predef$.MODULE$.assert(this.sumWithImplicits(5, b) == 12);
         Predef$.MODULE$.assert(this.sumWithImplicits(5, 8) == 13);
@@ -116,13 +125,13 @@ public final class Methods$
         final int x$9 = this.sumWithDefault$default$1();
         module$2.assert(this.sumWithDefault(x$9, x$8) == 10);
         Predef$.MODULE$.assert(this.intOperation(5, 7, (Function2<Object, Object, Object>)new Methods$$anonfun$main.Methods$$anonfun$main$1()) == 12);
-        final Function2 f = (Function2)new Methods$$anonfun.Methods$$anonfun$2();
+        final Function2 f = (Function2)new Methods$$anonfun.Methods$$anonfun$3();
         Predef$.MODULE$.assert(this.intOperation(5, 7, (Function2<Object, Object, Object>)f) == 12);
         Predef$.MODULE$.assert(this.intOperation(5, 7, (Function2<Object, Object, Object>)new Methods$$anonfun$main.Methods$$anonfun$main$2()) == 12);
         Predef$.MODULE$.assert(this.intOperation(5, 7, (Function2<Object, Object, Object>)new Methods$$anonfun$main.Methods$$anonfun$main$3()) == 12);
-        final Function3 partial = (Function3)new Methods$$anonfun.Methods$$anonfun$4();
+        final Function3 partial = (Function3)new Methods$$anonfun.Methods$$anonfun$6();
         Predef$.MODULE$.assert(this.intOperation(5, 7, (Function2<Object, Object, Object>)new Methods$$anonfun$main.Methods$$anonfun$main$4(partial)) == 12);
-        final Function1 partialMethod = (Function1)new Methods$$anonfun.Methods$$anonfun$3();
+        final Function1 partialMethod = (Function1)new Methods$$anonfun.Methods$$anonfun$4();
         Predef$.MODULE$.assert(partialMethod.apply$mcII$sp(7) == 12);
         Predef$.MODULE$.assert(this.structural(new SumOperation(5, 7)) == 12);
         Predef$.MODULE$.assert(this.structural(new ZeroOperation()) == 0);

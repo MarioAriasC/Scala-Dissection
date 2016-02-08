@@ -5,7 +5,9 @@ object Methods {
 
   def sum(a: Int, b: Int) = a + b
 
-  def curriedSum(a: Int)(b: Int) = a + b
+  def curriedSum2(a: Int)(b: Int) = a + b
+
+  def curriedSum3(a: Int)(b: Int)(c: Int) = a + b + c
 
   def sumWithImplicits(a: Int)(implicit b: Int) = a + b
 
@@ -26,11 +28,19 @@ object Methods {
     assert(sum(b = 5, a = 7) == 12)
 
     //new val from curried
-    val sum5 = curriedSum(5) _
+    val sum5 = curriedSum2(5) _
     assert(sum5(7) == 12)
 
+    val sum4 = curriedSum3(4) _
+    val sum10 = sum4(6)
+
+    assert(sum10(2) == 12)
+
+    val sum4and6 = curriedSum3(4)(6) _
+    assert(sum4and6(2) == 12)
+
     //curried call
-    assert(curriedSum(5)(7) == 12)
+    assert(curriedSum2(5)(7) == 12)
 
     //implicit parameter call
     implicit val b = 7

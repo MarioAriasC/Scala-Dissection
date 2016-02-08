@@ -11,6 +11,6 @@ public final class Methods$$anonfun$1 extends AbstractFunction1$mcII$sp implemen
     }
     
     public int apply$mcII$sp(final int b) {
-        return Methods$.MODULE$.curriedSum(5, b);
+        return Methods$.MODULE$.curriedSum2(5, b);
     }
 }
